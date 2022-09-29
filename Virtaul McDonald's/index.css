@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#navbar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(177, 22, 9);
+}
+#navbar img{
+    width: auto;
+    height: 70%;
+    margin-right: 50px;
+}
+#navbar h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: rgb(247, 212, 12);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#navbar+div{
+    display: flex;
+}
+#navbar+div>h1{
+    width: 92.6%;
+    text-align:center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    margin-right: -100px;
+    margin-top: 10px;
+}
+#orderId{
+    width: auto;
+    text-align: end;
+    margin: 20px 50px 0px auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#container, #containers{
+    width: 35%;
+    margin: auto;
+    padding: 20px;
+}
+#form ,#cards{
+    border: 10px solid coral;
+    padding: 30px;
+    font-size: 20px;
+}
+button{
+    border: 1px solid black;
+    height: 30px;
+    padding: 0px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(127, 127, 228);
+    margin: 25px 0px -10px 130px;
+    cursor: pointer;
+}

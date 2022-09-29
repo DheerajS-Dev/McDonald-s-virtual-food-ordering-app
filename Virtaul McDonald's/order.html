@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual McDonald's</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <img
+        src="https://mcdindia.com/wp-content/uploads/2020/01/m-logo-big.svg"
+        alt=""
+      />
+      <h1>McDonald's</h1>
+    </div>
+    <div>
+      <h1>Your Item</h1>
+      <h2 id="orderId"></h2>
+    </div>
+    <div id="containers">
+      <div id="cards"></div>
+    </div>
+  </body>
+</html>
+<script>
+  let data = JSON.parse(localStorage.getItem("foodArr"));
+
+  let orederNo = Math.floor(Math.random() * (20 - 1) + 1);
+  let displayData = (data) => {
+    let count1 = 1;
+    data.forEach((element) => {
+      const p = document.createElement("p");
+      p.setAttribute("class", "foods");
+      p.innerText = `${count1}. ${element}`;
+      count1++;
+
+      document.getElementById("cards").append(p);
+    });
+    document.getElementById("orderId").innerText = `Order Id: ${orederNo}`;
+    orederNo++;
+  };
+  displayData(data);
+
+  let count = 0;
+  setInterval(function () {
+    myFunction();
+  }, 1000);
+  function myFunction() {
+    count++;
+    if (count == 1)
+      alert("Please Wait...! While your food is getting prepared");
+    if (count == 3) alert("Your order has been Prepared");
+    if (count == 6) alert("Enjoy Your Meal...!");
+    if (count == 8) {
+      alert("Thanks Visit Again!");
+      window.location.href = `./index.html`;
+    }
+  }
+</script>
