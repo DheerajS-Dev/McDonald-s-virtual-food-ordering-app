@@ -10,7 +10,7 @@ A Web Aplication, to make a order at McDonald's Virtually.
 
 - Payment will be generated after making the order succesfully.
 
-- Live link :- [Weather App](https://spontaneous-fenglisu-a1a487.netlify.app/)
+- Live link :- [MaDonald's](https://spontaneous-fenglisu-a1a487.netlify.app/)
 
 # Features :
 
